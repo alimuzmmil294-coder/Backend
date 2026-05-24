@@ -1,10 +1,10 @@
-import express from "express";
+import express, { text } from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-import multer from "multer  ";
+import { config } from "dotenv";
 
-dotenv.config();
-
+config();
 const app = express();
 app.use(express.json());
 
@@ -18,9 +18,9 @@ const transporter = nodemailer.createTransport({
 
 const mailOptions = {
   from: process.env.USER_EMAIL,
-  to: "muhammadnomank12@gmail.com",
-  subject: "Testing NodeMailer",
-  text: "Da Muzammili Email!, sa hlt da email da nodemailer library na send kra de",
+  to: "alimuzmmil294@gmail.com",
+  subject: "Muzammil's Email!",
+  text: "This is the email that Muzammil Ali sent You!!",
 };
 
 app.get("/", (req, res) => {
@@ -29,11 +29,12 @@ app.get("/", (req, res) => {
       if (err) {
         return res.status(500).json({
           message: err.message,
+          HelloWorld: "This is the email that Muzammil Ali sent You!!",
           success: false,
         });
       } else {
         return res.status(200).json({
-          message: "Email Sent Successfully!, Check Your Inbox",
+          message: "Email sent successfully!, Check your mail!",
           success: true,
         });
       }
@@ -45,8 +46,6 @@ app.get("/", (req, res) => {
     });
   }
 });
-
-// destinaion:()
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
