@@ -1,11 +1,19 @@
 {
+<<<<<<< HEAD
   "name": "seventh-project",
+=======
+  "name": "fifth-project",
+>>>>>>> 1870f4c3df51818deb99a44f447647844e786d90
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "dev": "nodemon PracticeMulter.js"
+=======
+    "dev": "nodemon Practice.js"
+>>>>>>> 1870f4c3df51818deb99a44f447647844e786d90
   },
   "keywords": [],
   "author": "",
@@ -13,12 +21,18 @@
   "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
+<<<<<<< HEAD
     "cloudinary": "^2.10.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.1.1",
     "nodemailer": "^8.0.7",
+=======
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+>>>>>>> 1870f4c3df51818deb99a44f447647844e786d90
     "nodemon": "^3.1.14"
   }
 }
